@@ -23,6 +23,7 @@ PRESETS = {
     "graph-mandala": ("src.showcases", "GraphMandalaSketch"),
     "flow-constellation": ("src.showcases", "FlowConstellationSketch"),
     "swarm": ("src.swarm", "SwarmSketch"),
+    "elastic": ("src.elastic", "ElasticSketch"),
 }
 
 def main(argv=None):
