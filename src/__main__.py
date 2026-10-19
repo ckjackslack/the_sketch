@@ -18,6 +18,7 @@ PRESETS = {
     "screensaver": ("old_screensaver", "WindowsScreensaverSketch"),
     "celestial": ("src.compositions", "CelestialSketch"),
     "flow-field": ("src.compositions", "FlowFieldSketch"),
+    "choreography": ("src.choreography", "ChoreographySketch"),
 }
 
 def main(argv=None):
