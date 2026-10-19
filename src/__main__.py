@@ -22,6 +22,7 @@ PRESETS = {
     "signal-garden": ("src.showcases", "SignalGardenSketch"),
     "graph-mandala": ("src.showcases", "GraphMandalaSketch"),
     "flow-constellation": ("src.showcases", "FlowConstellationSketch"),
+    "swarm": ("src.swarm", "SwarmSketch"),
 }
 
 def main(argv=None):
