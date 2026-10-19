@@ -1,15 +1,19 @@
 import math
 
-from sketch_gif import Sketch, run_sketch
+from ..sketch_gif import Sketch, run_sketch
 
 
-class FancySketch(Sketch):
+class ArkanoidSketch(Sketch):
     def setup(self):
+        self.center_x = self.canvas.width // 2
+        self.center_y = self.canvas.height // 2
+        self.radius = min(self.center_x, self.center_y) // 2
         self.angle = 0
-        self.radius = min(self.canvas.width, self.canvas.height) // 2
+        self.triangle_size = 20
+        self.triangle_speed = 0.03
 
     def update(self):
-        self.angle += 0.02
+        self.angle += self.triangle_speed
 
     def draw(self):
         self.canvas.draw.rectangle(
@@ -17,16 +21,21 @@ class FancySketch(Sketch):
             fill=(0, 0, 0)  # Black background
         )
 
-        num_circles = 10
-        for i in range(num_circles):
-            circle_radius = self.radius - i * (self.radius // num_circles)
-            x = self.canvas.width // 2 + int(circle_radius * math.cos(self.angle * (i + 1)))
-            y = self.canvas.height // 2 + int(circle_radius * math.sin(self.angle * (i + 1)))
-            color = self.get_color(i, num_circles)
-            self.canvas.draw.ellipse(
-                (x - circle_radius, y - circle_radius, x + circle_radius, y + circle_radius),
-                fill=color
-            )
+        num_triangles = 6
+        for i in range(num_triangles):
+            angle = self.angle + (2 * math.pi * i / num_triangles)
+            x = self.center_x + int(self.radius * math.cos(angle))
+            y = self.center_y + int(self.radius * math.sin(angle))
+            color = self.get_color(i, num_triangles)
+            self.draw_triangle(x, y, self.triangle_size, color)
+
+    def draw_triangle(self, x, y, size, color):
+        points = [
+            (x - size, y),
+            (x + size, y),
+            (x, y - size)
+        ]
+        self.canvas.draw.polygon(points, fill=color)
 
     def get_color(self, index, total):
         hue = int((index / total) * 255)
@@ -57,4 +66,4 @@ class FancySketch(Sketch):
 
 
 if __name__ == "__main__":
-    run_sketch(FancySketch, 800, 800, frame_limit=200)
+    run_sketch(ArkanoidSketch, 800, 600, frame_limit=200)

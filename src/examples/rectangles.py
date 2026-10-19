@@ -2,8 +2,8 @@ import random
 
 from PIL import ImageDraw
 
-from sketch_gif import Sketch, run_sketch
-from helpers import random_color, clamp
+from ..sketch_gif import Sketch, run_sketch
+from ..helpers import random_color, clamp
 
 
 class RectanglesSketch(Sketch):

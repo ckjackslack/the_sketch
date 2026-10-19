@@ -1,10 +1,10 @@
 """Three animated example compositions demonstrating graph, signals and scene systems."""
-from .sketch_gif import Sketch
-from .scene import Scene,Node
-from .signals import oscillate,envelope,bind
-from .graph import Graph,Ref,Param
-from .creative import Painter,hsv,TAU,spiral,rose,lissajous
-from .dynamics import flow_lines,poisson_disc
+from ..sketch_gif import Sketch
+from ..scene import Scene,Node
+from ..signals import oscillate,envelope,bind
+from ..graph import Graph,Ref,Param
+from ..creative import Painter,hsv,TAU,spiral,rose,lissajous
+from ..dynamics import flow_lines,poisson_disc
 import math
 
 class SignalGardenSketch(Sketch):
