@@ -16,6 +16,8 @@ PRESETS = {
     "matrix": ("matrix", "MatrixSketch"),
     "rectangles": ("rectangles", "RectanglesSketch"),
     "screensaver": ("old_screensaver", "WindowsScreensaverSketch"),
+    "celestial": ("src.compositions", "CelestialSketch"),
+    "flow-field": ("src.compositions", "FlowFieldSketch"),
 }
 
 def main(argv=None):
