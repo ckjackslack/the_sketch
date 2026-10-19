@@ -83,7 +83,8 @@ class Graph:
                          parameters[source.name] if isinstance(source, Param) else source)
                 typ = op.inputs[key]
                 if typ is not object and not isinstance(value, typ):
-                    raise TypeError(f"{name}.{key}: expected {(" or ".join(t.__name__ for t in typ) if isinstance(typ, tuple) else typ.__name__)}, got {type(value).__name__}")
+                    expected_name = " or ".join(t.__name__ for t in typ) if isinstance(typ, tuple) else typ.__name__
+                    raise TypeError(f"{name}.{key}: expected {expected_name}, got {type(value).__name__}")
                 args[key] = value
             result = op.fn(**args)
             if op.output is not object and not isinstance(result, op.output):
