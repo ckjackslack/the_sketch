@@ -1,8 +1,8 @@
 """Visual demonstration: deterministic boids with a wandering predator."""
-from .sketch_gif import Sketch
-from .world import World,Vector
-from .behaviors import separate,align,cohere,wander,seek,flee
-from .creative import Painter,hsv
+from ..sketch_gif import Sketch
+from ..world import World,Vector
+from ..behaviors import separate,align,cohere,wander,seek,flee
+from ..creative import Painter,hsv
 
 class SwarmSketch(Sketch):
     def setup(self):

@@ -1,7 +1,7 @@
 """Spring lattice and magnetic vortex composition."""
-from .sketch_gif import Sketch
-from .physics import PhysicsWorld,Body,Vector,vortex_force
-from .creative import Painter,hsv
+from ..sketch_gif import Sketch
+from ..physics import PhysicsWorld,Body,Vector,vortex_force
+from ..creative import Painter,hsv
 
 class ElasticSketch(Sketch):
     def setup(self):

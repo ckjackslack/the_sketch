@@ -1,7 +1,7 @@
 """Generative compositions built from the creative primitives."""
-from .sketch_gif import Sketch,run_sketch
-from .creative import Painter,gradient,hsv,spiral,star,TAU
-from .dynamics import flow_lines,poisson_disc,ParticleSystem
+from ..sketch_gif import Sketch,run_sketch
+from ..creative import Painter,gradient,hsv,spiral,star,TAU
+from ..dynamics import flow_lines,poisson_disc,ParticleSystem
 import math
 
 class FlowFieldSketch(Sketch):

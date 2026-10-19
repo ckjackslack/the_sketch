@@ -1,6 +1,6 @@
 import random
 
-from sketch_gif import Sketch, run_sketch
+from ..sketch_gif import Sketch, run_sketch
 
 
 class CirclesSketch(Sketch):

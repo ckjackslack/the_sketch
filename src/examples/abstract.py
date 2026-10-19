@@ -1,7 +1,7 @@
 import random
 
-from helpers import random_color
-from sketch_gif import Sketch, run_sketch
+from ..helpers import random_color
+from ..sketch_gif import Sketch, run_sketch
 
 
 class AbstractLineSketch(Sketch):

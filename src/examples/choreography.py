@@ -1,8 +1,8 @@
 """Compositional example: timeline, conditional triggers, nodes and event reactions."""
-from .scene import Scene, Node
-from .automation import Director
-from .creative import Painter, hsv, TAU
-from .sketch_gif import Sketch, run_sketch
+from ..scene import Scene, Node
+from ..automation import Director
+from ..creative import Painter, hsv, TAU
+from ..sketch_gif import Sketch, run_sketch
 import math
 
 class ChoreographySketch(Sketch):

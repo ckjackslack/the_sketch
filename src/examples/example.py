@@ -1,4 +1,4 @@
-from sketch_gif import Sketch, run_sketch
+from ..sketch_gif import Sketch, run_sketch
 
 
 # Example usage:

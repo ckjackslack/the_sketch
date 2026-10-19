@@ -1,9 +1,10 @@
 import random
+from pathlib import Path
 
 from PIL import ImageFont
 
-from sketch_gif import Sketch, run_sketch
-from helpers import random_color
+from ..sketch_gif import Sketch, run_sketch
+from ..helpers import random_color
 
 
 class MatrixSketch(Sketch):
@@ -14,7 +15,7 @@ class MatrixSketch(Sketch):
         self.characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
         self.font = ImageFont.truetype(
             # "/usr/share/fonts/truetype/ubuntu/Ubuntu-M.ttf",
-            "./clacon2.ttf",
+            str(Path(__file__).resolve().parents[1] / "clacon2.ttf"),
             self.font_size,
         )
 
