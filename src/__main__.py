@@ -19,6 +19,9 @@ PRESETS = {
     "celestial": ("src.compositions", "CelestialSketch"),
     "flow-field": ("src.compositions", "FlowFieldSketch"),
     "choreography": ("src.choreography", "ChoreographySketch"),
+    "signal-garden": ("src.showcases", "SignalGardenSketch"),
+    "graph-mandala": ("src.showcases", "GraphMandalaSketch"),
+    "flow-constellation": ("src.showcases", "FlowConstellationSketch"),
 }
 
 def main(argv=None):
